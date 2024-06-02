@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 export default function TextForm(props) {
   const handelUpClick = () => {
     console.log("Uppercase was clicked")
@@ -26,7 +25,7 @@ export default function TextForm(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
           {/* <label for="myBox" className="form-label">Example textarea</label> */}
-          <textarea class="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white'}} id="myBox" rows="8"></textarea>
+          <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? 'grey' : 'white'}} id="myBox" rows="8"></textarea>
         </div>
         <button className="btn btn-primary mx-1" onClick={handelUpClick}>Convert to uppercase</button>
         <button className="btn btn-primary mx-1" onClick={handelLoClick}>Convert to lowercase</button>
